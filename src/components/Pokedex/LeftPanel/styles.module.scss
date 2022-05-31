@@ -1,0 +1,383 @@
+.leftPanelContainer {
+  background-color: #dc0a2d;
+  border-radius: 7px;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px #89061c,
+              3px 3px #89061c,
+              4px 4px #89061c,
+              5px 5px #89061c,
+              6px 6px #89061c,
+              7px 7px #89061c,
+              8px 8px #89061c,
+              9px 9px #000000;
+  width: 500px;
+  height: 600px;
+
+  .circleContainer {
+    display: flex;
+    padding: 30px 0px 0px 30px;
+
+    .bigCircle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      background-color: #146b9f;
+      border-radius: 50%;
+      box-shadow: 
+        0 0 0 1px #000000,
+        0 0 0 15px #e9eef3,
+        0 0 0 16px #000000;
+
+      .light {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        animation: lightCircleBlinks 3s ease 0s infinite alternate none;
+      }
+
+      @keyframes lightCircleBlinks{
+        0%{
+          background-color: #146b9f;
+          box-shadow: none;
+        }
+        97%{
+          background-color: #146b9f;
+          box-shadow: none;
+        }
+        100%{
+          background-color: rgb(0 255 255 / 25%);
+          box-shadow: 0 0 40px 0 #0ff;
+        }
+      }
+    }
+    
+    .smallCirclesContainer {
+      display: flex;
+      margin-left: 30px;
+
+      .smallCircle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid #000000;
+        margin-right: 5px;
+
+        .lightSmallCircle {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+        }
+
+        .redCircleAnimation {
+          animation: redCircleBlinks 2s ease 3s infinite;
+
+          @keyframes redCircleBlinks {
+            0%{
+              background-color: #710000;
+              box-shadow: none;
+            }
+            90%{
+              background-color: #710000;
+              box-shadow: none;
+            }
+            100%{
+              background-color: rgb(255 0 0 / 25%);
+              box-shadow: 0 0 9px 0 #f00;
+            }
+          }
+        }
+
+        .yellowCircleAnimation {
+          animation: yellowCircleBlinks 2s ease 3.25s infinite;
+
+          @keyframes yellowCircleBlinks {
+            0%{
+              background-color: #c3ba00;
+              box-shadow: none;
+            }
+            90%{
+              background-color: #c3ba00;
+              box-shadow: none;
+            }
+            100%{
+              background-color: rgb(247 246 218 / 68%);
+              box-shadow: 0 0 9px 0 rgb(253 255 145);
+            }
+          }
+        }
+        
+        .greenCircleAnimation {
+          animation: greenCircleBlinks 2s ease 3.5s infinite;
+
+          @keyframes greenCircleBlinks {
+            0%{
+              background-color: #1f743b;
+              box-shadow: none;
+            }
+            90%{
+              background-color: #1f743b;
+              box-shadow: none;
+            }
+            100%{
+              background-color: rgb(247 246 218 / 68%);
+              box-shadow: 0 0 9px 0 rgb(253 255 145);
+            }
+          }
+        }
+      }
+
+      .redCircle {
+        background-color: #710000;
+      }
+      
+      .yellowCircle {
+        background-color: #c3ba00;
+      }
+      
+      .greenCircle {
+        background-color: #1f743b;
+      }
+    }
+  }
+
+  .screenContainer {
+    display: flex;
+    height: 350px;
+    justify-content: center;
+    margin-top: 30px;
+
+    .screenBorder {
+      background-color: #dedede;
+      border: 1px solid #000000;
+      width: 300px;
+      border-radius: 10px;
+      padding-right: 50px;
+      padding-left: 50px;
+
+      .screenCirclesContainer {
+        display: flex;
+        height: 50px;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      .bottomCirclesContainer {
+        justify-content: space-between;
+      }
+
+      .screenCircle {
+        width: 10px;
+        height: 10px;
+        background-color: #dc0a2d;
+        border-radius: 50%;
+        border: 1px solid #000000;
+      }
+
+      .screen {
+        background-color: #232323;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 250px;
+        border-radius: 5px;
+        color: white;
+      }
+
+      .selectCircle {
+        font-family: 'VT323', monospace;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 20px;
+        background-color: lightgreen;
+        border-radius: 5px;
+        border: 1px solid #000000;
+        cursor: pointer;
+        box-shadow: 1px 1px #306938, 2px 2px #000000;
+
+        &:active {
+          background-color: #306938;
+        }
+      }
+    }
+  }
+
+  .nameContainer {
+    display: flex;
+    justify-content: center;
+
+    .algo {
+      width: 400px; 
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nameInput {
+      background-color: #52af5f;
+      height: 45px;
+      width: 200px;
+      border: 1px solid #000000;
+      font-family: 'VT323', monospace;
+      font-size: 25px;
+      display:flex;
+      align-items: center;
+      padding-left: 5px;
+      text-transform: capitalize;
+      box-shadow: inset 1px 1px #306938, inset 2px 2px #000000;
+    }
+
+    .arrowsContainer {
+      display: flex;
+      align-items: center;
+
+      .cross {
+        width: 90px;
+        height: 90px;
+        position: relative;
+
+        .topCross {
+          width: 30px;
+          height: 30px;
+          background-color: #222;
+          cursor: pointer;
+          position: absolute;
+          top: 0;
+          left: 30px;
+          box-shadow: 3px 2px 0px 0px #010101;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+
+          .up {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #111;
+            position: absolute;
+            top: 5px;
+            left: 4px;
+          }
+
+          &:active .up {
+            border-bottom: 10px solid #9b9d6e;
+          }
+        }
+        
+        .leftCross {
+          width: 30px;
+          height: 30px;
+          background-color: #222;
+          z-index: 1;
+          cursor: pointer;
+          position: absolute;
+          left: 0;
+          top: 30px;
+          box-shadow: 0px 4px 0px -2px #010101, 
+                      1px 6px 0px -2px #010101, 
+                      2px 7px 0px -2px #010101;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+
+          &:active .left {
+            border-right: 10px solid #9b9d6e;
+          }
+
+          .left {
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-right: 10px solid #111;
+            border-bottom: 10px solid transparent;
+            position: absolute;
+            top: 5px;
+            left: 4px;
+          }
+        }
+
+        .midCross {
+          width: 30px;
+          height: 30px;
+          background-color: #222;
+          position: absolute;
+          top: 30px;
+          left: 30px;
+          box-shadow: -3px 2px #010101;
+
+          .midCircle  {
+            width: 20px;
+            height: 20px;
+            border-radius: 30px;
+            background: radial-gradient(#111, #222);
+            position: absolute;
+            top: 5px;
+            left: 4px;
+          }
+        }
+
+        .rightCross {
+          width: 30px;
+          height: 30px;
+          background-color: #222;
+          cursor: pointer;
+          position: absolute;
+          top: 30px;
+          right: 0;
+          box-shadow: 1px 3px 0 2px #010101;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+
+          &:active .right {
+            border-left: 10px solid #9b9d6e;
+          }
+
+          .right {
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-left: 10px solid #111;
+            border-bottom: 10px solid transparent;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+          }
+        }
+
+        .bottomCross {
+          width: 30px;
+          height: 30px;
+          background-color: #222;
+          cursor: pointer;
+          position: absolute;
+          bottom: 0;
+          left: 30px;
+          box-shadow: 2px 3px #010101, 3px 4px #010101;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+
+          &:active .down {
+            border-top: 10px solid #9b9d6e;
+          }
+
+          .down {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #111;
+            position: absolute;
+            bottom: 5px;
+            left: 4px;
+          }
+        }
+      }
+    }
+  }
+}

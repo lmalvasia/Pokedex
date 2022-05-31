@@ -1,0 +1,17 @@
+.pokedexContainer {
+  display: flex;
+  justify-content: center;
+
+  .pokedex {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    margin-top: 30px;
+
+    .cylinder {
+      position: relative;
+      right: 531px;
+      bottom: 10px;
+    }
+  }
+}
